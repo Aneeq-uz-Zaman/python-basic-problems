@@ -1,0 +1,31 @@
+# import random
+
+# def generate_haiku():
+#     articles = ["the", "a", "an"]
+#     nouns = ["cloud", "mountain", "river", "tree", "flower", "bird"]
+#     verbs = ["flows", "blooms", "singing", "calls", "growing"]
+#     adverbs = ["gently", "calmly", "boldly", "freely", "brightly"]
+
+#     line1 = random.choice(articles) + " " + random.choice(nouns)
+#     line2 = random.choice(verbs) + " " + random.choice(adverbs)
+#     line3 = random.choice(articles) + " " + random.choice(nouns)
+
+#     return line1 + "\n" + line2 + "\n" + line3
+
+# print(generate_haiku())
+import random
+
+def random_music():
+    notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B']
+    rhythm = [1, 2, 4, 8, 16]
+    duration = [0.25, 0.5, 1, 2]
+    score = []
+    for i in range(16):
+        note = random.choice(notes)
+        beat = random.choice(rhythm)
+        dur = random.choice(duration)
+        score.append((note, beat, dur))
+    return score
+
+print(random_music())
+
